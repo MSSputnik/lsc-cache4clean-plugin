@@ -1,0 +1,1 @@
+"%JAVA_HOME%\bin\xjc.exe" -encoding utf-8 -p com.becketal.lsc.plugins.connectors.cache4clean.generated -d src\main\java -extension -b lsc.episode src\main\resources\schemas\lsc-cache4clean-plugin-1.0.xsd

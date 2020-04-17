@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://lsc-project.org/XSD/lsc-cache4clean-plugin-1.0.xsd" targetNamespace="http://lsc-project.org/XSD/lsc-cache4clean-plugin-1.0.xsd"
+	elementFormDefault="qualified" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:lsc="http://lsc-project.org/XSD/lsc-core-2.1.xsd" jaxb:version="2.0">
+
+	<xsd:import namespace="http://lsc-project.org/XSD/lsc-core-2.1.xsd" schemaLocation="lsc-core-2.1.xsd" />
+
+	<xsd:element name="Cache4CleanConfig">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="dryRun" type="xsd:boolean" />
+				<xsd:element name="dataSource" type="sourceType" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="sourceType">
+		<xsd:choice>
+			<xsd:element name="databaseSourceService" type="lsc:databaseSourceServiceType" />
+			<xsd:element name="googleAppsSourceService" type="lsc:googleAppsServiceType" />
+			<xsd:element name="ldapSourceService" type="lsc:ldapSourceServiceType" />
+			<xsd:element name="asyncLdapSourceService" type="lsc:asyncLdapSourceServiceType" />
+			<xsd:element name="pluginSourceService" type="lsc:pluginSourceServiceType" />
+		</xsd:choice>
+	</xsd:complexType>
+	
+</xsd:schema>
