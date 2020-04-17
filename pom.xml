@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.lsc.plugins.connectors</groupId>
-	<artifactId>Chache4CleanPlugin</artifactId>
+	<artifactId>Cache4CleanPlugin</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
